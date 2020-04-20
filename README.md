@@ -127,3 +127,14 @@ sys_schema_attribute :Dictionary Attribute
 ```
 	no_audit=true,staticDependent=u_for_test
 ```
+
+# GlideURL
+- Link: https://developer.servicenow.com/dev.do#!/reference/api/newyork/server/no-namespace/c_GlideURIScopedAPI
+```javascript
+var uri = action.getGlideURI();
+var path = "x_457861_my_app_taskex.do";
+uri.set("sys_id", "-1");
+uri.set('sysparm_query', 'license=' + current.sys_id );
+action.setRedirectURL(uri.toString(path));
+action.setNoPop(true);
+```
